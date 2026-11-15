@@ -72,5 +72,19 @@ export class VetementService {
       v => v.type.idType == idType
     );
   }
+    ajouterType(t: Tyype) {
+    t.idType = this.types.length ? Math.max(...this.types.map(x => x.idType)) + 1 : 1;
+    this.types.push(t);
+  }
+    updateType(t: Tyype) {
+    const index = this.types.findIndex(x => x.idType == t.idType);
+    if (index > -1) {
+      this.types[index] = t;
+      // mettre à jour el type fil vetements elli yestaamlouh
+      this.vetements.forEach(v => {
+        if (v.type.idType == t.idType) v.type = { ...t };
+      });
+    }
+  }
 }
   

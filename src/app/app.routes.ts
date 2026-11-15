@@ -7,6 +7,7 @@ import { RechercheParNom } from './recherche-par-nom/recherche-par-nom';
 import { Login } from './login/login';
 import { Forbidden } from './forbidden/forbidden';
 import { vetementGuard } from './vetement-guard';
+import { ListeTypes } from './liste-type/liste-type';
 
 export const routes: Routes = [
   { path: 'vetements', component: VetementsComponent },
@@ -17,6 +18,8 @@ export const routes: Routes = [
   {path: 'login', component: Login},
   {path: 'rechercheParNom',component: RechercheParNom},
   {path: 'app-forbidden', component: Forbidden},
+  { path: 'listeTypes', component: ListeTypes },
+  
  
 ];
 

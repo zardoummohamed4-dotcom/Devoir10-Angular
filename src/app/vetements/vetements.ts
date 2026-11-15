@@ -33,6 +33,6 @@ export class VetementsComponent implements OnInit  {
   if (conf)
   this.vetementService.supprimerVetement(p);
   }
-
+  
 }
 
